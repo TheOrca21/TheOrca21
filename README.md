@@ -1,5 +1,61 @@
 # Sudhakar Sridharan — Portfolio
 
+A small Vite + React portfolio site. This repo builds a static site and is published to GitHub Pages.
+
+## Quick start
+
+- Install dependencies:
+
+```bash
+npm install
+```
+
+- Run locally:
+
+```bash
+npm run dev
+# open http://localhost:5173
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+Built output is in the `dist/` folder.
+
+## Deploy (GitHub Pages)
+
+This repository publishes the `dist/` folder to the `gh-pages` branch.
+
+- One-off deploy using `gh-pages` package:
+
+```bash
+npx gh-pages -d dist
+```
+
+- Alternative (push `dist/` subtree):
+
+```bash
+# from repo root
+git add dist && git commit -m "chore: add built site" || true
+git subtree push --prefix dist origin gh-pages
+```
+
+## Notes
+
+- Vite `base` is configured for GitHub Pages under `/TheOrca21/` in `vite.config.ts`. If you rename the repo or want a different host path, update `base` accordingly.
+- Favicon and other asset links are resolved at build time; if you move the site root, ensure the `base` value reflects the Pages URL.
+
+## Files of interest
+
+- `vite.config.ts` — Vite configuration and `base` setting.
+- `index.html` — HTML entry; favicon and module entry points.
+
+---
+If you want, I can add a GitHub Action to automate building and publishing on push to `main`.# Sudhakar Sridharan — Portfolio
+
 Personal portfolio website for Sudhakar Sridharan, Software Engineer based in Chennai, India.
 
 The site presents professional experience, selected projects, and technical skills — focused on full-stack software and practical AI-powered systems.
