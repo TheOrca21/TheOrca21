@@ -1,12 +1,7 @@
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  /**
-   * GitHub Pages project site: https://<user>.github.io/Portfolio/
-   * Change to '/' if deploying to a user/organization site or custom domain.
-   */
-  base: mode === 'production' ? '/Portfolio/' : '/',
-}))
+  base: '/Portfolio/',
+})
