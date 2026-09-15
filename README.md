@@ -1,173 +1,115 @@
-# Sudhakar Sridharan — Portfolio
+Sudhakar Sridharan — Portfolio
 
-A small Vite + React portfolio site. This repo builds a static site and is published to GitHub Pages.
+Personal portfolio website showcasing my experience, projects, and work across software engineering, AI/ML, and Generative AI.
 
-## Quick start
+🌐 Live: https://theorca21.github.io/TheOrca21/
 
-- Install dependencies:
+About
 
-```bash
+I’m a Software Engineer with 2+ years of experience building full-stack applications and AI-powered systems.
+
+My work has involved backend development, Generative AI, RAG, speech AI, document intelligence, machine learning, automation, and cloud-based applications.
+
+This portfolio brings together my professional experience, selected projects, technical skills, and current areas of learning.
+
+Tech Stack
+
+* Frontend: React, TypeScript
+* Build Tool: Vite
+* Styling: CSS
+* Deployment: GitHub Pages
+* Version Control: Git, GitHub
+
+Featured Work
+
+The portfolio currently highlights selected work from my professional experience, including:
+
+* Multilingual Voice-Based AI Support Platform
+    A multilingual voice-based application combining speech recognition, retrieval-augmented generation, LLM-based response generation, and text-to-speech.
+* OCR-Based Document Intelligence Pipeline
+    A document processing and validation system combining OCR, AI-based document understanding, backend processing, and automation.
+
+More personal and open-source projects will be added as they develop.
+
+Running Locally
+
+Prerequisites
+
+* Node.js
+* npm
+
+Setup
+
+Clone the repository:
+
+git clone https://github.com/TheOrca21/TheOrca21.git
+cd TheOrca21
+
+Install dependencies:
+
 npm install
-```
 
-- Run locally:
+Start the development server:
 
-```bash
 npm run dev
-# open http://localhost:5173
-```
 
-## Build
+The application will be available at the local URL shown by Vite, typically:
 
-```bash
+http://localhost:5173
+
+Production Build
+
+Create a production build:
+
 npm run build
-```
-
-Built output is in the `dist/` folder.
-
-## Deploy (GitHub Pages)
-
-This repository publishes the `dist/` folder to the `gh-pages` branch.
-
-- One-off deploy using `gh-pages` package:
-
-```bash
-npx gh-pages -d dist
-```
-
-- Alternative (push `dist/` subtree):
-
-```bash
-# from repo root
-git add dist && git commit -m "chore: add built site" || true
-git subtree push --prefix dist origin gh-pages
-```
-
-## Notes
-
-- Vite `base` is configured for GitHub Pages under `/TheOrca21/` in `vite.config.ts`. If you rename the repo or want a different host path, update `base` accordingly.
-- Favicon and other asset links are resolved at build time; if you move the site root, ensure the `base` value reflects the Pages URL.
-
-## Files of interest
-
-- `vite.config.ts` — Vite configuration and `base` setting.
-- `index.html` — HTML entry; favicon and module entry points.
-
----
-If you want, I can add a GitHub Action to automate building and publishing on push to `main`.# Sudhakar Sridharan — Portfolio
-
-Personal portfolio website for Sudhakar Sridharan, Software Engineer based in Chennai, India.
-
-The site presents professional experience, selected projects, and technical skills — focused on full-stack software and practical AI-powered systems.
-
-## Tech stack
-
-- React 19
-- TypeScript
-- Vite
-- CSS (no UI framework)
-- GitHub Pages (static deployment)
-
-No backend, database, API, or authentication.
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Open the URL shown in the terminal (typically `http://localhost:5173`).
-
-## Build
-
-```bash
-npm run build
-```
 
 Preview the production build locally:
 
-```bash
 npm run preview
-```
 
-## Deployment (GitHub Pages)
+Deployment
 
-This project is configured for a GitHub Pages **project site**:
+The portfolio is deployed using GitHub Pages through GitHub Actions.
 
-`https://<username>.github.io/Portfolio/`
+Every push to the main branch triggers the deployment workflow.
 
-### Setup
+The site is configured as a GitHub Pages project site, so the Vite base path is configured for:
 
-1. Push this repository to GitHub (repository name: `Portfolio`).
-2. Go to **Settings → Pages → Build and deployment**.
-3. Set **Source** to **GitHub Actions**.
-4. Push to the `main` branch — the workflow in `.github/workflows/deploy.yml` builds and deploys automatically.
+/TheOrca21/
 
-### Base path
+Project Structure
 
-Production builds use `base: '/Portfolio/'` in `vite.config.ts`.
-
-If you deploy to a user/organization site (`username.github.io`) or a custom domain, change the `base` value to `'/'`.
-
-### External links
-
-Before deploying, add your URLs in `src/data/links.ts`:
-
-- GitHub
-- LinkedIn
-- Resume (PDF URL)
-
-Links only appear in the navigation and contact section when URLs are provided.
-
-## Repository structure
-
-```
 src/
-├── components/       # UI components
-│   ├── Hero.tsx      # Hero content (fallback layout)
-│   ├── HeroVisual.tsx # Placeholder slot for future 3D
-│   ├── Header.tsx
-│   ├── Section.tsx
-│   └── ...
-├── data/             # Typed content (edit here, not JSX)
-│   ├── projects.ts   # Project interface + data
-│   ├── experience.ts
-│   ├── skills.ts
-│   ├── links.ts
-│   └── ...
+├── assets/
+├── components/
+├── data/
+├── types/
 ├── App.tsx
-├── App.css
+├── main.tsx
 └── index.css
-```
+public/
 
-## Adding projects
+The project keeps content such as projects, experience, and skills separated from the UI components where practical.
 
-Edit `src/data/projects.ts`. Each project supports:
+Current Focus
 
-| Field | Required | Description |
-|-------|----------|-------------|
-| `title` | yes | Project name |
-| `description` | yes | Summary |
-| `technologies` | yes | Tech tags |
-| `type` | yes | `professional`, `open-source`, or `personal` |
-| `featured` | yes | Show on homepage |
-| `githubUrl` | no | Public repo link |
-| `demoUrl` | no | Live demo link |
-| `year` | no | Year |
-| `image` | no | Screenshot path |
+I’m currently spending time going deeper into:
 
-Professional projects without public links display a **Professional Project** label — no fake GitHub/Demo buttons.
+* Machine Learning
+* Deep Learning
+* Large Language Models
+* Transformers
+* Retrieval-Augmented Generation
+* AI systems and infrastructure
+* Backend and distributed systems
+* Cloud and developer infrastructure
 
-## Future: Three.js / React Three Fiber
+Connect
 
-The hero is structured for optional 3D:
+* Portfolio: https://theorca21.github.io/TheOrca21/
+* GitHub: https://github.com/TheOrca21
+* LinkedIn: https://www.linkedin.com/in/sudhakar-sridharan/
 
-- `Hero.tsx` — content and layout (current fallback)
-- `HeroVisual.tsx` — visual slot (grid placeholder today)
+⸻
 
-To add 3D later, install `three`, `@react-three/fiber`, and `@react-three/drei`, then implement `Hero3D.tsx` inside the visual slot.
-
-## License
-
-Private portfolio — all rights reserved.
+Built with React + TypeScript.
